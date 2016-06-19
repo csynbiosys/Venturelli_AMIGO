@@ -1,0 +1,45 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% venturelli_psdata.m file
+%
+% TITLE: GAL Network model
+%
+% References: Venturelli, Ophelia S., Hana El-Samad, and Richard M. Murray. 
+%			  "Synergistic dual positive feedback loops established by molecular 
+%			   sequestration generate robust bimodal response." Proceedings of 
+%			   the National Academy of Sciences 109.48 (2012): E3324-E3333.
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%
+%        INPUT FILE FOR THE EXPERIMENTAL SCHEME
+%		 Minimum required inputs:
+%			> Paths related data
+%			> Model
+%           > Experimental scheme: n_exp; exp_y0iexp; t_fiexp; 
+%                                  u_interpiexp; t_coniexp; uiexp
+%                                  n_obsiexp; obs_namesiexp; obsiexp
+%				(AMIGO_SData) ==>> n_siexp; t_siexp;
+%								   data_type; noise_type; std_deviexp
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+venturelli_model 						%Loads model
+venturelli_experimental_scheme		    %Loads experimental scheme
+
+%==================================
+% EXPERIMENTAL DATA RELATED INFO
+%==================================
+
+inputs.exps.data_type='pseudo_pos';		%Type of experimental data: 'real'|'pseudo'|'pseudo_pos' (>=0)
+inputs.exps.noise_type='homo_var';		%Type of experimental noise: Gaussian with zero mean and
+												% Homoscedastic with constant variance: 'homo'
+												% Homoscedastic with varying variance: 'homo_var'
+												% Heteroscedastic: 'hetero'
+												
+%EXPERIMENT 1
+inputs.exps.std_dev{1}=[0.10 0.10 0.10]; %Standard deviation of the noise for each experiment: Ex: 0.10 <=> 10%
+%EXPERIMENT 2
+inputs.exps.std_dev{2}=[0.10 0.10 0.10]; %Standard deviation of the noise for each experiment: Ex: 0.10 <=> 10%
+%EXPERIMENT 3
+inputs.exps.std_dev{3}=[0.10 0.10 0.10]; %Standard deviation of the noise for each experiment: Ex: 0.10 <=> 10%
+%EXPERIMENT 4
+inputs.exps.std_dev{4}=[0.10 0.10 0.10]; %Standard deviation of the noise for each experiment: Ex: 0.10 <=> 10%
