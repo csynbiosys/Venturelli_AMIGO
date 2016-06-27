@@ -1,0 +1,54 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% venturelli_lrank file
+%
+% EXPERIMENTAL SCHEME: 6 experiments: 2 sustained; 2 pulse-up; 2 pulse-down
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+venturelli_model 											%Loads model
+
+inputs.exps.n_exp=6;                                  		%Number of experiments                                                                            
+ for iexp=1:inputs.exps.n_exp   
+	inputs.exps.obs{iexp}='states';
+	inputs.exps.exp_y0{iexp}=zeros(1,inputs.model.n_st);  	%Initial conditions for each experiment          
+	inputs.exps.t_f{iexp}=3000;                             %Experiments duration
+ end           
+ 
+ %EXPERIMENT 1: SUSTAINED GALACTOSE MAX
+ 
+ inputs.exps.u_interp{1}='sustained';                  %Stimuli definition for experiment 1:
+ inputs.exps.t_con{1}=[0 3000];                        % Input switching times: Initial and final time    
+ inputs.exps.u{1}=[2]; 
+ 
+ %EXPERIMENT 2: SUSTAINED NO GALACTOSE
+ 
+ inputs.exps.u_interp{2}='sustained';                  %Stimuli definition for experiment 1:
+ inputs.exps.t_con{2}=[0 3000];                        % Input switching times: Initial and final time    
+ inputs.exps.u{2}=[0]; 
+ 
+ %EXPERIMENT 3: ONE PULSE-UP
+ 
+ inputs.exps.u_interp{3}='pulse-up';                 %Stimuli definition for experiment 2
+ inputs.exps.n_pulses{3}=1;                            %Number of pulses |-|_|-|_|-|_|-|_|-|_    
+ inputs.exps.u_min{3}=0;inputs.exps.u_max{3}=2;        %Minimum and maximum value for the input
+ inputs.exps.t_con{3}=[linspace(0,3000,4)];    
+ 
+ %EXPERIMENT 4: ONE PULSE-DOWN
+ 
+ inputs.exps.u_interp{4}='pulse-down';                 %Stimuli definition for experiment 2
+ inputs.exps.n_pulses{4}=1;                            %Number of pulses |-|_|-|_|-|_|-|_|-|_    
+ inputs.exps.u_min{4}=0;inputs.exps.u_max{4}=2;        %Minimum and maximum value for the input
+ inputs.exps.t_con{4}=[linspace(0,3000,3)]; 
+ 
+ %EXPERIMENT 5: THREE PULSE-UP
+ 
+ inputs.exps.u_interp{5}='pulse-up';                 %Stimuli definition for experiment 2
+ inputs.exps.n_pulses{5}=3;                            %Number of pulses |-|_|-|_|-|_|-|_|-|_    
+ inputs.exps.u_min{5}=0;inputs.exps.u_max{5}=2;        %Minimum and maximum value for the input
+ inputs.exps.t_con{5}=[linspace(0,3000,8)];  
+ 
+  %EXPERIMENT 6: THREE PULSE-DOWN
+ 
+ inputs.exps.u_interp{6}='pulse-down';                 %Stimuli definition for experiment 2
+ inputs.exps.n_pulses{6}=3;                            %Number of pulses |-|_|-|_|-|_|-|_|-|_    
+ inputs.exps.u_min{6}=0;inputs.exps.u_max{6}=2;        %Minimum and maximum value for the input
+ inputs.exps.t_con{6}=[linspace(0,3000,7)];  
