@@ -24,10 +24,10 @@ venturelli_experimental_scheme		    %Loads experimental scheme
 %==================================
 % EXPERIMENTAL DATA RELATED DATA
 %==================================
-inputs.exps.data_type='real';			%Type of experimental data: 'real'|'pseudo'|'pseudo_pos' (>=0)
-inputs.exps.noise_type='homo_var';		% Gaussian Homoscedastic with varying variance
+inputs.exps.data_type='pseudo';			%Type of experimental data: 'real'|'pseudo'|'pseudo_pos' (>=0)
+%inputs.exps.noise_type='homo_var';		% Gaussian Homoscedastic with varying variance
 
-temp=load(strcat('\AMIGO2R2016_v00\Results\Venturelli_set1\SData_Venturelli_run1\strreport_Venturelli_run1.mat'),'results');
+temp=load(strcat('\AMIGO2R2016a\Results\Venturelli_set1\SData_Venturelli_run1\strreport_Venturelli_run1.mat'),'results');
 
 %EXPERIMENT 1
 
@@ -54,9 +54,12 @@ clear temp;
 % UNKNOWNS RELATED DATA
 %==================================
 
-inputs.PEsol.id_global_theta='all';     		   %'all'|User selected 
-inputs.PEsol.global_theta_max=5.*inputs.model.par; % Maximum allowed values for the parameters
-inputs.PEsol.global_theta_min=0.2.*inputs.model.par % Minimum allowed values for the parameters
+inputs.PEsol.id_global_theta=char('kf81','kr81','kf83','kr83','kf84','kr84',...
+							'ag1','ag3','ag4','a0g80','ag80','kg1','kg3',...
+							'kg80','yg80',...
+							'yc81','yc83','yc84','e');     		   %'all'|User selected 
+inputs.PEsol.global_theta_max=3.*inputs.model.par;    % Maximum allowed values for the paramters
+inputs.PEsol.global_theta_min=0.5.*inputs.model.par;
 
 
 %==================================
