@@ -65,7 +65,7 @@ inputs.exps.n_exp=4;                                  %Number of experiments
  %EXPERIMENT 1
  inputs.exps.n_obs{1}=4;								%Number of observed quantities
  inputs.exps.obs_names{1}=char('Gal1p','Gal3p','Gal4p','Gal80p') %Name of the observed quantities
- inputs.exps.obs{1}=char('Gal1p=G1','Gal3p=G3','Gal4p=G4','Gal80p=G80')	%Observation function
+ inputs.exps.obs{1}=char('Gal1p=G1_2','Gal3p=G3_2','Gal4p=G4_2','Gal80p=G80_2')	%Observation function
  
  inputs.exps.u_interp{1}='sustained';                  %Stimuli definition for experiment 1
  inputs.exps.t_con{1}=[0 720];                        % Input switching times: Initial and final time    
@@ -74,7 +74,7 @@ inputs.exps.n_exp=4;                                  %Number of experiments
  %EXPERIMENT 2
  inputs.exps.n_obs{2}=4;								%Number of observed quantities
  inputs.exps.obs_names{2}=char('Gal1p','Gal3p','Gal4p','Gal80p') %Name of the observed quantities
- inputs.exps.obs{2}=char('Gal1p=G1','Gal3p=G3','Gal4p=G4','Gal80p=G80')	%Observation function
+ inputs.exps.obs{2}=char('Gal1p=G1_2','Gal3p=G3_2','Gal4p=G4_2','Gal80p=G80_2')	%Observation function
  
  inputs.exps.u_interp{2}='pulse-up';                 %Stimuli definition for experiment 2
  inputs.exps.n_pulses{2}=2;                            %Number of pulses    
@@ -84,7 +84,7 @@ inputs.exps.n_exp=4;                                  %Number of experiments
 %EXPERIMENT 3
  inputs.exps.n_obs{3}=4;								%Number of observed quantities
  inputs.exps.obs_names{3}=char('Gal1p','Gal3p','Gal4p','Gal80p') %Name of the observed quantities
- inputs.exps.obs{3}=char('Gal1p=G1','Gal3p=G3','Gal4p=G4','Gal80p=G80')	%Observation function
+ inputs.exps.obs{3}=char('Gal1p=G1_2','Gal3p=G3_2','Gal4p=G4_2','Gal80p=G80_2')	%Observation function
  
  inputs.exps.u_interp{3}='pulse-down';                 %Stimuli definition for experiment 3
  inputs.exps.n_pulses{3}=3;                            %Number of pulses    
@@ -94,7 +94,7 @@ inputs.exps.n_exp=4;                                  %Number of experiments
  %EXPERIMENT 4
  inputs.exps.n_obs{4}=4;								%Number of observed quantities
  inputs.exps.obs_names{4}=char('Gal1p','Gal3p','Gal4p','Gal80p') %Name of the observed quantities
- inputs.exps.obs{4}=char('Gal1p=G1','Gal3p=G3','Gal4p=G4','Gal80p=G80')	%Observation function
+ inputs.exps.obs{4}=char('Gal1p=G1_2','Gal3p=G3_2','Gal4p=G4_2','Gal80p=G80_2')	%Observation function
  
  inputs.exps.u_interp{4}='step';                 %Stimuli definition for experiment 4
  inputs.exps.n_steps{4}=5;                            %Number of pulses   
@@ -104,7 +104,7 @@ inputs.exps.n_exp=4;                                  %Number of experiments
  %EXPERIMENT 5
  inputs.exps.n_obs{5}=4;								%Number of observed quantities
  inputs.exps.obs_names{5}=char('Gal1p','Gal3p','Gal4p','Gal80p') %Name of the observed quantities
- inputs.exps.obs{5}=char('Gal1p=G1','Gal3p=G3','Gal4p=G4','Gal80p=G80')	%Observation function
+ inputs.exps.obs{5}=char('Gal1p=G1_2','Gal3p=G3_2','Gal4p=G4_2','Gal80p=G80_2')	%Observation function
  
  inputs.exps.u_interp{5}='linear';                 %Stimuli definition for experiment 4
  inputs.exps.n_linear{5}=7;                            %Number of pulses   
